@@ -1,4 +1,12 @@
-<h1><b>Контакты</b></h1>
+{% extends "homepage/base.html" %}
+
+
+{% block title %}Контакты{% endblock %}
+{% block content %}
+<h1>
+    <b>Контакты</b>
+</h1>
 <p>Автор: <i>Прекрасный</i> Кирилл Мельников</p>
 <p>Город: Батайск</p>
 <a href="{% url 'about' %}">На главную</a>
+{% endblock %}

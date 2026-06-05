@@ -1,0 +1,14 @@
+<!DOCTYPE html>
+<html lang="rus">
+    <head>
+        <meta charset="UTF-8">
+        <title>{% block title %}Сайт величайшего{% endblock %}</title>
+    </head>
+    <body>
+
+        {% include "homepage/header.html" %}
+        {% block content %}{% endblock %}
+        {% include "homepage/footer.html" %}
+        
+    </body>
+</html>
