@@ -2,6 +2,12 @@
 
 {% block content %}
 <h1><b>Домашние задания</b></h1>
+{%for task in tasks%}
+    <div>
+        <h2>{{tasks.title}}</h2>
+        <p>{{tasks.description}}</p>
+    </div>
+{% endfor %}
 <nav>
     <a href="{% url 'about' %}">Главная</a>
 </nav>

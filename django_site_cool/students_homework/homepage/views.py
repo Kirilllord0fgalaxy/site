@@ -1,5 +1,6 @@
 from django.shortcuts import render
 from django.http import HttpResponse
+from .models import Tasks
 
 # Create your views here.
 
@@ -13,4 +14,5 @@ def contacts(request):
     return render(request, 'homepage/contacts.html')
 
 def tasks(request):
-    return render(request, 'homepage/tasks.html')
+    tasks = Tasks.objects.all()
+    return render(request, 'homepage/tasks.html', {'tasks':tasks})
